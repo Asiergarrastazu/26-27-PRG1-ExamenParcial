@@ -1,27 +1,20 @@
-
 import java.util.Scanner;
 
-public class Examen.java {
-    
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        int edad;
+        do {
+            edad = sc.nextInt();
+        } while (edad < 17 || edad > 70);
 
-    scannersc = new sacanner;
-    
-    System.out.println("introduzca edad")
-    Scanner edad = scannersc;
-    
-    if (edad >18){
-    System.out.println("Es mayor de edad");
-    } else {
-        System.out.println("Es menor de edad"");
+        int asignaturas;
+        do {
+            asignaturas = sc.nextInt();
+        } while (asignaturas < 1 || asignaturas > 10);
+
+        System.out.println(edad);
+        System.out.println(asignaturas);
     }
-
-
-
-
-
-system.out.println ("Examen parcial PRG1")
-
-
-
 }
