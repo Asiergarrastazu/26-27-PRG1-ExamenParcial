@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Examen {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -25,6 +25,7 @@ public class Main {
         int suma = 0;
         int aprobadas = 0;
         int suspensas = 0;
+        int notaMaxima = 0;
 
         for (int n = 1; n <= asignaturas; n++) {
             int nota;
@@ -41,6 +42,10 @@ public class Main {
             } else {
                 suspensas++;
             }
+
+            if (nota > notaMaxima) {
+                notaMaxima = nota;
+            }
         }
 
         double media = (double) suma / asignaturas;
@@ -48,5 +53,6 @@ public class Main {
         System.out.println("Media: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
         System.out.println("Asignaturas suspensas: " + suspensas);
+        System.out.println("Nota más alta: " + notaMaxima);
     }
 }
