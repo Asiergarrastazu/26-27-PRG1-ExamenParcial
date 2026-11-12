@@ -27,8 +27,12 @@ public class Main {
         int suspensas = 0;
 
         for (int n = 1; n <= asignaturas; n++) {
-            System.out.print("Nota de la asignatura " + n + ": ");
-            int nota = sc.nextInt();
+            int nota;
+
+            do {
+                System.out.print("Nota de la asignatura " + n + ": ");
+                nota = sc.nextInt();
+            } while (nota < 0 || nota > 10);
 
             suma += nota;
 
