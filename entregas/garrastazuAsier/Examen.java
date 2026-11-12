@@ -1,7 +1,6 @@
-
 import java.util.Scanner;
 
-public class examen {
+public class Examen {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -61,5 +60,11 @@ public class examen {
         System.out.println("Asignaturas suspensas: " + suspensas);
         System.out.println("Nota más alta: " + notaMaxima);
         System.out.println("Nota más baja: " + notaMinima);
+
+        if (media > 5) {
+            System.out.println("Pasa de curso");
+        } else {
+            System.out.println("Repite");
+        }
     }
 }
