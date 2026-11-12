@@ -11,6 +11,12 @@ public class Main {
             edad = sc.nextInt();
         } while (edad < 17 || edad > 70);
 
+        if (edad >= 18) {
+            System.out.println("Es mayor de edad");
+        } else {
+            System.out.println("Es menor de edad");
+        }
+
         int asignaturas;
         do {
             asignaturas = sc.nextInt();
@@ -18,6 +24,7 @@ public class Main {
 
         int suma = 0;
         int aprobadas = 0;
+        int suspensas = 0;
 
         for (int n = 1; n <= asignaturas; n++) {
             System.out.print("Nota de la asignatura " + n + ": ");
@@ -27,6 +34,8 @@ public class Main {
 
             if (nota >= 5) {
                 aprobadas++;
+            } else {
+                suspensas++;
             }
         }
 
@@ -34,5 +43,6 @@ public class Main {
 
         System.out.println("Media: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
+        System.out.println("Asignaturas suspensas: " + suspensas);
     }
 }
